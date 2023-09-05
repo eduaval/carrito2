@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito ❤</title>
+    
+    <!-- Incluye los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/4a0820ee57.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <!-- Navbar (Menú de navegación) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <!-- logo -->
+            <div class="navbar-brand ml-auto d-flex align-items-center" style="margin-right: 20px;">
+                <img src="./assets/images/logo.png" alt="LogoCorporativo" style="width: 50px; ">
+                <p>LogoCorporativo</p>
+            </div>
+            <!-- buscardor -->
+            <form class="form-inline mx-auto d-flex ">
+                <input class="form-control mr-2 " type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <!-- menu -->
+            <div class="collapse navbar-collapse hola" id="navbarNav" >
+                <ul class="navbar-nav hola ml-auto"> 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-house"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-diamond"></i> Pokedex</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link activo" href="#"><i class="fa-solid fa-cart-shopping"></i> Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-gamepad"></i> Juego De La Vida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-file"></i> ToDoList</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    
+   
+
+    <div class="container bg-light " style="margin-top: 100px;" >
+        
+        <div class="row">
+
+            <main id="root" class="d-flex flex-wrap justify-content-around col-12 col-lg-8">
+            </main>
+
+            <aside class=" col-12 col-lg-4 text-center ">
+				<h2>Carrito</h2>
+                <hr>
+
+                <table class=" w-100  table table-striped" >
+                    <thead>
+                        <tr>
+                            <td>Articulo</td>
+                            <td>Cantidad</td>
+                            <td>Accion</td>
+                            <td>Total</td>
+                        </tr>
+                        
+                    </thead>
+                    <tbody id="carrito" >
+                        
+                        
+                        
+                    </tbody>
+                    <tfoot id="foot">
+                        <tr>
+                            <td colspan="4" >
+                                Carrito Vacio - Empieza a comprar!!
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+			</aside>
+
+        </div>
+
+    </div>
+    
+    <template id="template-card">
+
+		<div class="card m-2" style="width: 12rem;">
+			<img src="..." class="card-img-top" alt="...">
+			<div class="card-body">
+			<h5 class="card-title">$<span>100</span></h5>
+			<p class="card-text">sandia</p>
+			<a href="#" class="btn btn-secondary">Agregar</a>
+			</div>
+		</div>
+
+    </template>
+
+    <template id="template-carrito">
+        <tr>
+            <td>manzana</td>
+            <td>2</td>
+            <td>
+                <button class="btn btn-light btn-sm">
+                    -
+                </button>
+                <button class="btn btn-dark btn-sm">
+                    +
+                </button>
+            </td>
+            <td>100.00</td>
+        </tr>
+        
+    </template>
+
+    <template id="template-footer">
+        <tr>
+            <td>
+                Total
+            </td>
+            <td>
+                10
+            </td>
+       
+            <td>
+                <button id="boton-vaciar" class="btn btn-secondary">Vaciar</button>
+            </td>
+           
+        
+            <td>
+                <p class="text-right"><span id="total">0</span></p>
+            </td>
+        </tr>
+    </template>
+
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Incluye los archivos JavaScript de Bootstrap (jQuery debe estar incluido antes) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Estilos personalizados para mover el menú al lado derecho -->
+<script src="index.js"></script>
+</body>
+</html>
